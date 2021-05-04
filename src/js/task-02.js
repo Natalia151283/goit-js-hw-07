@@ -8,11 +8,19 @@ const ingredients = [
   ];
 
 let parent = document.querySelector('#ingredients');
-for (let i = 0; i < ingredients.length; i++) {
-	let li = document.createElement('li');
-	li.innerHTML = ingredients[i];
-	parent.appendChild(li);
+const listElementLi = createElementLi(ingredients);
+parent.insertAdjacentHTML("beforeend", listElementLi) ;
+
+console.log(listElementLi);
+
+function createElementLi(items){
+ const li = items.map(item => {return `<li>${item}</li>`
+})
+.join('');
+  return li
 }
+
+
 
  
 

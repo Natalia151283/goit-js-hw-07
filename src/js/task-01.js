@@ -5,8 +5,8 @@ console.log(`В списке ${itemEl.length}  категории`);
 itemEl.forEach((el) =>
 
    ( console.log(
-        `Категория: ${el.firstElementChild.textContent} `),
-        console.log( `Количество элементов:${el.lastElementChild.children.length}`
+        `Категория: ${el.firstElementChild.textContent} `,
+         `Количество элементов:${el.lastElementChild.children.length}`
         ))
    
     )

@@ -18,11 +18,21 @@ const images = [
 
 
 let parent = document.querySelector('#gallery');
-images.forEach(img => {
-    const li = document.createElement('li');
-    li.insertAdjacentHTML('afterbegin', `<img src="${img.url}" alt="${img.alt}" />`);
-    parent.appendChild(li);
-});
+
+
+
+const listElementLi = createElementLi(images);
+parent.insertAdjacentHTML("beforeend", listElementLi) ;
+
+console.log(listElementLi);
+
+function createElementLi(images){
+ const li = images.map(image => {
+   return `<li><img src="${image.url}" alt="${image.alt}" /></li>`
+})
+.join('');
+  return li
+}
 
 
 

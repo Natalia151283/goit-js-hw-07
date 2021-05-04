@@ -23,13 +23,10 @@ const inputEl = document.querySelector('#validation-input');
 inputEl.addEventListener('blur', onInputBlur)
 
 
-function onInputFocus(){
-console.log('инпут в фокусе')
-};
  
 function onInputBlur(){
    
-    if(inputEl.value.length <= inputEl.dataset.length){
+    if(inputEl.value.length == inputEl.dataset.length){
         inputEl.classList.remove('invalid');
         inputEl.classList.add('valid');  
     } else {
