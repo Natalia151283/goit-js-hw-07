@@ -9,8 +9,8 @@ function onInputChange(event) {
   if ((refs.spanEl.textContent = event.currentTarget.value)) {
     true;
   }
-  if (refs.inputEl.value === "") {
-    refs.spanEl.textContent = "незнакомец";
+  if (refs.inputEl.value === '') {
+    refs.spanEl.textContent = 'незнакомец';
     return;
   }
-  refs.spanEl.textContent = event.currentTarget.value;
+  refs.spanEl.textContent = event.currentTarget.value;}
