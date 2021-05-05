@@ -1,4 +1,4 @@
-const style = document.createElement('style');
+const style = document.createElement("style");
 style.innerHTML = `
 #validation-input {
     border: 3px solid #bdbdbd;
@@ -14,24 +14,17 @@ style.innerHTML = `
 `;
 document.head.appendChild(style);
 
+const inputEl = document.querySelector("#validation-input");
 
+inputEl.addEventListener("blur", onInputBlur);
 
-
-const inputEl = document.querySelector('#validation-input');
-
-
-inputEl.addEventListener('blur', onInputBlur)
-
-
- 
-function onInputBlur(){
-   
-    if(inputEl.value.length == inputEl.dataset.length){
-        inputEl.classList.remove('invalid');
-        inputEl.classList.add('valid');  
-    } else {
-        inputEl.classList.remove('valid');  
-        inputEl.classList.add('invalid');
-    }
-    console.log('инпут потерял в фокусе')
-    }
+function onInputBlur() {
+  if (inputEl.value.length == inputEl.dataset.length) {
+    inputEl.classList.remove("invalid");
+    inputEl.classList.add("valid");
+  } else {
+    inputEl.classList.remove("valid");
+    inputEl.classList.add("invalid");
+  }
+  console.log("инпут потерял в фокусе");
+}
